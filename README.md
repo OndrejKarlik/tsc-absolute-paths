@@ -1,0 +1,1 @@
+Drop-in replacement/wrapper for tsc. It parses tsc output and turns relative paths to absolute, so you can click on error messages in MSVC. 

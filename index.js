@@ -16,7 +16,7 @@ child.stderr.on("data", (data) => { stderr += data.toString(); });
 
 function fix(str )  {
     let result = "";
-    const REGEX = /^(?<filename>[^:]+)(?<rest>\(\d+,\d+\):.*)$/;
+    const REGEX = /^(?<filename>[^/][^:]+)(?<rest>\(\d+,\d+\):.*)$/;
 
     for(const line of str.split(os.EOL)) {
         const match = line.match(REGEX);
