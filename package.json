@@ -13,6 +13,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "tsc-absolute-paths": "./bin/tsc-absolute-paths"
+    "tsc-absolute-paths": "bin/tsc-absolute-paths"
   }
 }
