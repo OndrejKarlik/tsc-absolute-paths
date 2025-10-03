@@ -1,0 +1,2 @@
+#!/usr/bin/env node
+require('../tsc-absolute-paths.js')
