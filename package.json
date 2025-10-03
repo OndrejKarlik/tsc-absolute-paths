@@ -1,0 +1,18 @@
+{
+  "name": "tsc-absolute-paths",
+  "version": "1.0.0",
+  "description": "tsc wrapper that prints absolute paths in error messages",
+  "keywords": [
+    "tsc"
+  ],
+  "license": "MIT",
+  "author": "Ondra Karlik",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.2"
+  }
+}
