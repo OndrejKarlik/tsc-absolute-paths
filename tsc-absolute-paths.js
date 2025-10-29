@@ -9,18 +9,22 @@ const args = process.argv.slice(2);
 
 const tscBin = process.platform === "win32" ? "tsc.cmd" : "tsc";
 
-const child = spawn(tscBin, args, { shell: true });
+// There is a nodejs warning when using args with shell:true. 
+// There is no way to disable the warning, so we must concatenate the arguments ourselves.
+// The argument joining seems to be too simplified, it is however taken directly from nodejs:
+// https://github.com/nodejs/node/blob/1da054d99bb16d35c54d759f36ccc125b90070bd/lib/child_process.js#L652
+const child = spawn(`${tscBin} ${args.join(" ")}`, { shell: true });
 
 let stdout = "";
 let stderr = "";
 child.stdout.on("data", (data) => { stdout += data.toString(); });
 child.stderr.on("data", (data) => { stderr += data.toString(); });
 
-function fix(str )  {
+function fix(str) {
     let result = "";
     const REGEX = /^(?<filename>[^/][^:]+)(?<rest>\(\d+,\d+\):.*)$/;
 
-    for(const line of str.split(os.EOL)) {
+    for (const line of str.split(os.EOL)) {
         const match = line.match(REGEX);
         if (match) {
             result += `${path.join(process.cwd(), match.groups.filename)}${match.groups.rest})\n`;
