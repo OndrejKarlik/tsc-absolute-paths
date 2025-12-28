@@ -1,14 +1,15 @@
 {
   "name": "tsc-absolute-paths",
-  "version": "1.0.1",
-  "description": "tsc wrapper that prints absolute paths in error messages",
+  "version": "1.1.0",
+  "description": "tsc/tsgo wrapper that prints absolute paths in error messages",
   "keywords": [
-    "tsc"
+    "tsc",
+    "tsgo"
   ],
   "license": "MIT",
   "author": "Ondra Karlik",
   "type": "commonjs",
-  "main": "tsc-absolute-paths.js",
+  "main": "typescript-absolute-paths.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

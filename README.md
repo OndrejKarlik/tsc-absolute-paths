@@ -1,1 +1,1 @@
-Drop-in replacement/wrapper for tsc. It parses tsc output and turns relative paths to absolute, so you can click on error messages in MSVC. 
+Drop-in replacement/wrapper for tsc/tsgo. It parses tsc output and turns relative paths to absolute, so you can click on error messages in MSVC. Simply replace tsc/tsgo call with tsc-absolute-paths/tsgo-absolute-paths call with the same arguments.
